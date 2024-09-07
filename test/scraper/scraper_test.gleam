@@ -1,0 +1,61 @@
+import gleeunit/should
+import scraper/internal
+import simplifile
+
+pub fn parse_links_test() {
+  let assert Ok(raw) = simplifile.read("./test/scraper/sample_web_response.txt")
+  raw
+  |> internal.parse_links
+  |> should.equal([
+    "https://store.steampowered.com/app/1535560/",
+    "https://store.steampowered.com/app/2084000/",
+    "https://store.steampowered.com/app/1934680/",
+    "https://store.steampowered.com/app/1750770/",
+    "https://store.steampowered.com/app/2401970/",
+    "https://store.steampowered.com/app/3035500/",
+    "https://store.steampowered.com/app/1999520/",
+    "https://store.steampowered.com/app/2964280/",
+    "https://store.steampowered.com/app/1429850/",
+    "https://store.steampowered.com/app/2105910/",
+    "https://store.steampowered.com/app/2897240/",
+    "https://store.steampowered.com/app/2071430/",
+    "https://store.steampowered.com/app/1411020/",
+    "https://store.steampowered.com/app/2786260/",
+    "https://store.steampowered.com/app/2683150/",
+    "https://store.steampowered.com/app/2627780/",
+    "https://store.steampowered.com/app/2969380/",
+    "https://store.steampowered.com/app/2878600/",
+    "https://store.steampowered.com/app/3103930/",
+    "https://store.steampowered.com/app/3154950/",
+    "https://store.steampowered.com/app/1669170/",
+    "https://store.steampowered.com/app/2205330/",
+    "https://store.steampowered.com/app/2717480/",
+    "https://store.steampowered.com/app/2380050/",
+    "https://store.steampowered.com/app/2403290/",
+    "https://store.steampowered.com/app/2471090/",
+    "https://store.steampowered.com/app/2540840/",
+    "https://store.steampowered.com/app/3144640/",
+    "https://store.steampowered.com/app/1576080/",
+    "https://store.steampowered.com/app/2852980/",
+    "https://store.steampowered.com/app/2866000/",
+    "https://store.steampowered.com/app/2492600/",
+    "https://store.steampowered.com/app/2613800/",
+    "https://store.steampowered.com/app/3164900/",
+    "https://store.steampowered.com/app/3157790/",
+    "https://store.steampowered.com/app/3104030/",
+    "https://store.steampowered.com/app/2017610/",
+    "https://store.steampowered.com/app/3164300/",
+    "https://store.steampowered.com/app/2843550/",
+    "https://store.steampowered.com/app/3042990/",
+    "https://store.steampowered.com/app/1648190/",
+    "https://store.steampowered.com/app/3086630/",
+    "https://store.steampowered.com/app/2731300/",
+    "https://store.steampowered.com/app/1086620/",
+    "https://store.steampowered.com/app/2331920/",
+    "https://store.steampowered.com/app/3107990/",
+    "https://store.steampowered.com/app/3122100/",
+    "https://store.steampowered.com/app/1983300/",
+    "https://store.steampowered.com/app/884180/",
+    "https://store.steampowered.com/app/1600910/",
+  ])
+}
